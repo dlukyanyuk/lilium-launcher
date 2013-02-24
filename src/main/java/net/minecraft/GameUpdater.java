@@ -166,7 +166,7 @@ public class GameUpdater implements Runnable {
 		urlList = new URL[jarCount];
 
 		// # Откуда скачивать
-		URL path = new URL(Config.StrDown5);
+		URL path = new URL(LoginForm.getCurrentServer().getServerUrl());
 
 		for (int i = 0; i < jarCount - 1; i++) {
 			urlList[i] = new URL(path, jar.nextToken());

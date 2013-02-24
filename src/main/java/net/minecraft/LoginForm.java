@@ -282,22 +282,18 @@ public class LoginForm extends TransparentPanel {
 					setCurrentServer(Servers.CASSANDRAHDhigh);
 					Config.setDownloadLink(Servers.CASSANDRAHDhigh.getServerUrl());
 				
-			//	} else if (server.equals("Dizzy | Vanilla Survival")) {
-			//		setCurrentServer(Servers.FEYA);
-			//		Config.setDownloadLink(Servers.FEYA.getServerUrl());
-			//	
-			//	} else if (server.equals("Dreamweaver | Lots of Mods")) {
-			//		setCurrentServer(Servers.DREAMWEAVER);
-			//		Config.setDownloadLink(Servers.DREAMWEAVER.getServerUrl());
-					
-				} else if (server == "Оффлайн режим") {
+				} else if (server.equals("Dizzy | Vanilla Survival")) {
+					setCurrentServer(Servers.FEYA);
+					Config.setDownloadLink(Servers.FEYA.getServerUrl());
+				
+				}  else if (server == "Оффлайн режим") {
 					setCurrentServer(Servers.OFF);
 				}
 
 			}
 		};
 		//String[] items = { "Honeymoon | MLP RP", "Honeymoon - HD (low) | MLP RP", "Honeymoon - HD (High) | MLP RP", "Dizzy | Vanilla Survival", "Dreamweaver | Lots of Mods"};
-		String[] items = { "Honeymoon | MLP RP", "Honeymoon - HD (low) | MLP RP", "Honeymoon - HD (High) | MLP RP"};
+		String[] items = { "Honeymoon | MLP RP", "Honeymoon - HD (low) | MLP RP", "Honeymoon - HD (High) | MLP RP", "Dizzy | Vanilla Survival", "Dreamweaver | Lots of Mods"};
 		JComboBox servers = new JComboBox(items);
 		servers.addActionListener(ChooseServer);
 		values.add(servers);
